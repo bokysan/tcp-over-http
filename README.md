@@ -53,28 +53,6 @@ For example:
 
 The net effect is about the same. Which option you use depends on your end software.
 
-Advanced configuration
-----------------------
-
-If you need to forward multiple services, you will need to put apache in front using something like the following:
-
-    <Location /openvpn-relay>
-        ProxyPass http://localhost:8800/
-        ProxyPassReverse http://localhost:8800/
-    </Location>
-
-    <Location /smtp-relay>
-        ProxyPass http://localhost:8801/
-        ProxyPassReverse http://localhost:8801/
-    </Location>
-
-    <Location /imap-relay>
-        ProxyPass http://localhost:8802/
-        ProxyPassReverse http://localhost:8802/
-    </Location>
-
-You can secure you connections additionaly using HTTP Basic authentication on apache, node.js client should be able to handle this through http://<username>:<password>@<url> syntax. See more here: http://httpd.apache.org/docs/2.2/howto/auth.html
-
 To set up node.js as a service on your server, check the internets, I found one nice tutorial here: http://kvz.io/blog/2009/12/15/run-nodejs-as-a-service-on-ubuntu-karmic/
 
 OpenVPN (and other blocked services)
