@@ -1,17 +1,19 @@
 "use strict";
 
-var http = require('http');
+var args = process.argv.splice(2);
+
+var http = require(args[0].substring(0, 5) == 'https' ? 'https' : 'http');
 var sys = require('sys');
 var net = require('net');
 var url = require('url');
 
-var args = process.argv.splice(2);
 
 var options = url.parse(args[0]);
 options.headers = {
 	'Connection': 'Upgrade',
 	'Upgrade': 'TCPoverHTTP'
 };
+options.rejectUnauthorized = false;
 
 var req = http.request(options);
 req.end();
