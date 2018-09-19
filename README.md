@@ -1,3 +1,8 @@
+**DECEASED** This project is archived and done for, as there are much better alternatives available nowdays.
+
+
+
+
 tcp-over-http
 =============
 
