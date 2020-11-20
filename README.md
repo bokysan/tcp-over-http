@@ -1,5 +1,7 @@
 **DECEASED** This project is archived and done for, as there are much better alternatives available nowdays.
 
+Plase see [SocketAce](https://github.com/bokysan/socketace) which can proxy TCP connections via websockets, other sockets, UDP connections and DNS.
+
 
 
 
